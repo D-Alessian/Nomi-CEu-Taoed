@@ -1,4 +1,4 @@
-name: "Deploy to GitHub Releases & CurseForge"
+name: "Deploy to GitHub Releases"
 
 on:
   workflow_dispatch:
@@ -61,16 +61,6 @@ jobs:
     if: ${{ inputs.deploy_to_gh }}
     needs: build
     uses: ./.github/workflows/deploygh.yml
-    with:
-      tag: ${{ inputs.tag }}
-      release_type: ${{ inputs.release_type }}
-    secrets: inherit
-
-  deployCF:
-    name: Deploy to CurseForge (${{ inputs.tag }})
-    if: ${{ inputs.deploy_to_cf }}
-    needs: build
-    uses: ./.github/workflows/deploycf.yml
     with:
       tag: ${{ inputs.tag }}
       release_type: ${{ inputs.release_type }}
