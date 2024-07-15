@@ -13,7 +13,7 @@
 - A discord integration built-in
 - Fresh content including custom GTCEu build
 - (WIP) Including GCYL
-- (WIP) Custom Groovy scripts
+- (WIP) Custom Groovy scripts for custom multiblocks, recipes, and cleanup
 - Just general tweaks and improvements that fit a certain playstyle
 
  
@@ -22,11 +22,11 @@
 
 ## Credits
 
-My personal credits:
+ **My personal credits:**
 
 For helping me figure things out and give me sweet custom jar [Zorbatron](https://github.com/Zorbatron)
 
-Original Nomi CEu credits:
+**Original Nomi CEu credits:**
 
 Original pack by [Exaxxion](https://github.com/Exaxxion).  
 Stabilized miner textures from [Self-Torture Edition](https://github.com/NotMyWing/Omnifactory-Self-Torture-Edition).  
