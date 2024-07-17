@@ -1,5 +1,5 @@
 # Test Builds pack from pushes and pull requests in same repo.
-name: "[NOT CALLABLE] Test Build Pack"
+name: "Test Build Pack"
 on:
   push:
     branches:
