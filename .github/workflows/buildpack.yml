@@ -21,6 +21,10 @@ on:
         description: Where to download the Changelog File from. See CONTRIBUTING.md for more information.
         required: false
         type: string
+      changelog_cf_url:
+        description: Where to download the CF Changelog File from. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
       changelog_branch:
         description: Branch to download changelog Files from. See CONTRIBUTING.md for more information.
         required: false
@@ -47,6 +51,10 @@ on:
         type: string
       changelog_url:
         description: Where to download the Changelog File from. See CONTRIBUTING.md for more information.
+        required: false
+        type: string
+      changelog_cf_url:
+        description: Where to download the CF Changelog File from. See CONTRIBUTING.md for more information.
         required: false
         type: string
       changelog_branch:
@@ -123,13 +131,18 @@ jobs:
         run: npm run gulp check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Build and Zip Pack
         working-directory: ./tools
         run: npm run gulp
         env:
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
           CHANGELOG_URL: ${{ inputs.changelog_url }}
+          CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
           COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Upload All Files
@@ -184,6 +197,9 @@ jobs:
         run: npm run gulp check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Make Artifact Names
         id: artifactNames
@@ -228,13 +244,18 @@ jobs:
         run: npm run gulp check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Build Client
         working-directory: ./tools
         run: npm run gulp buildClient
         env:
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
           CHANGELOG_URL: ${{ inputs.changelog_url }}
+          CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
           COMPARE_TAG: ${{ inputs.compare_tag }}
           
       - name: Upload Client Zip
@@ -292,13 +313,18 @@ jobs:
         run: npm run gulp check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Build Server
         working-directory: ./tools
         run: npm run gulp buildServer
         env:
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
           CHANGELOG_URL: ${{ inputs.changelog_url }}
+          CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
           COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Upload Server Zip
@@ -347,13 +373,18 @@ jobs:
         run: npm run gulp check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+          CURSEFORGE_API_TOKEN: ${{ secrets.CURSEFORGE_API_TOKEN }}
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
 
       - name: Build Lang and Changelogs
         working-directory: ./tools
         run: npm run gulp buildLang
         env:
+          CFCORE_API_TOKEN: ${{ secrets.CFCORE_API_TOKEN }}
           CHANGELOG_BRANCH: ${{ inputs.changelog_branch }}
           CHANGELOG_URL: ${{ inputs.changelog_url }}
+          CHANGELOG_CF_URL: ${{ inputs.changelog_cf_url }}
           COMPARE_TAG: ${{ inputs.compare_tag }}
 
       - name: Upload Lang Zip
