@@ -7,7 +7,7 @@
 # Only the CFCORE_API_TOKEN secret is accessed, meaning it is the only one revealed, meaning that the other secrets cannot be used by nodejs tools
 # GITHUB_TOKEN permissions are set to read
 
-name: "[NOT CALLABLE] Fork PR Build Pack"
+name: "Fork PR Build Pack"
 
 on:
   pull_request_target:
