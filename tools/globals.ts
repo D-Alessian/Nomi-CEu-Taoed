@@ -43,7 +43,7 @@ export const templatesFolder = "templates";
 export const storageFolder = "storage";
 
 // The Repository Owner (For Issues & PR Tags Transforms in Changelog)
-export const repoOwner = "Nomi-CEu";
+export const repoOwner = "Tao";
 
 // The Repository Name (For Issues & PR Tags Transforms in Changelog)
-export const repoName = "Nomi-CEu";
+export const repoName = "Nomi-CEu-Taoed";
