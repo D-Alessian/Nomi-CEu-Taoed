@@ -17,7 +17,7 @@
 - Just general tweaks and improvements that fit a certain playstyle
 
  
-### Installation Instructions:
+## Installation Instructions:
 
 
 ## Credits
