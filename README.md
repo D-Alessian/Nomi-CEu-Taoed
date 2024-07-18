@@ -3,9 +3,9 @@
 <p align="center"><b><i>Fork of <a href="https://github.com/Nomi-CEu/Nomi-CEu"> Nomifactory CEu</a>, using even more mods, and even more content.</i></b></p>
 <h1 align="center">
     <a href="https://github.com/Nomi-CEu/Nomi-CEu/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Nomi-CEu/Nomi-CEu?style=for-the-badge&logo=github" alt="License"></a>
-    <a href="https://discord.gg/SBH33AxsHw"><img src="https://img.shields.io/discord/927050775073534012?style=for-the-badge&logo=discord&logoColor=%23ffffff&label=discord%20&labelColor=gray&color=%235865F2" alt="Discord"></a>
+    <a href="https://discord.gg/SBH33AxsHw"><img src="https://img.shields.io/discord/1213905295475216394?style=for-the-badge&logo=discord&logoColor=%23ffffff&label=discord%20&labelColor=gray&color=%235865F2" alt="Discord"></a>
     <br>
-    <a href="https://www.curseforge.com/minecraft/modpacks/Nomi-CEu"><img src="https://cf.way2muchnoise.eu/versions/For%20MC_nomi-ceu_all.svg?badge_style=for_the_badge" alt="MC Versions"></a>
+    <a href="https://legacy.curseforge.com/minecraft/modpacks/nomi-ceu-taoed"><img src="https://cf.way2muchnoise.eu/versions/For%20MC_nomi-ceu_all.svg?badge_style=for_the_badge" alt="MC Versions"></a>
 </h1>
 
 ## Features:
