@@ -1,4 +1,4 @@
-name: "Deploy to GitHub Releases"
+name: "Deploy Releases"
 
 on:
   workflow_dispatch:
