@@ -66,3 +66,13 @@ jobs:
       release_type: ${{ inputs.release_type }}
     secrets: inherit
 
+deployCF:
+    name: Deploy to CurseForge (${{ inputs.tag }})
+    if: ${{ inputs.deploy_to_cf }}
+    needs: build
+    uses: ./.github/workflows/deploycf.yml
+    with:
+      tag: ${{ inputs.tag }}
+      release_type: ${{ inputs.release_type }}
+    secrets: inherit
+
