@@ -1,4 +1,4 @@
-name: "[NOT CALLABLE] Deploy To CurseForge"
+name: "Deploy To CurseForge"
 on:
   workflow_call:
     inputs:
