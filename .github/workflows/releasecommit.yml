@@ -62,7 +62,7 @@ jobs:
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_KEY }}
-          owner: Nomi-CEu
+          owner: D-Alessian
 
       - name: Checkout Repo
         uses: actions/checkout@v4
