@@ -29,7 +29,7 @@
  **My personal credits:**
 
 - The Nomi-CEu team of course for making this amazing modpack [Nomi-CEu](https://github.com/Nomi-CEu)
-- For helping me figure things out and give me sweet custom jar [Zorbatron](https://github.com/Zorbatron)
+- For helping me figure things out [Zorbatron](https://github.com/Zorbatron) [Mireole](https://github.com/Mireole)
 
 
 **Original Nomi CEu credits:**
