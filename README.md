@@ -40,7 +40,7 @@
 - Certain new quests from [GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack).  
 - GTCE item-ID to GTCEu item-ID conversion scripts by [brachy84](https://github.com/brachy84).   
 - Perfect Gem textures from [FurfSky Reborn](http://furfsky.net/). ([Permission](https://ibb.co/bBpksq0) at [this message](https://discord.com/channels/771187253937438762/774353150278369351/938438074503942184) in [FurfSky Reborn server](https://discord.gg/fsr)).  
-Certain hard mode recipe chains and Magnetron texture from [GCY Science](https://github.com/GregTechCEu/gregicality-science).  
-Flux Networks compatibility recipes from [smudgerox](https://github.com/smudgerox).  
+- Certain hard mode recipe chains and Magnetron texture from [GCY Science](https://github.com/GregTechCEu/gregicality-science).  
+- Flux Networks compatibility recipes from [smudgerox](https://github.com/smudgerox).  
 
 Thank you!
