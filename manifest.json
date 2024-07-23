@@ -599,7 +599,7 @@
     {
       "projectID": 419286,
       "fileID": 5079135,
-      "required": true
+      "required": true,
       "sides": [
         "client"
       ]
@@ -713,7 +713,7 @@
     {
       "projectID": 870276,
       "fileID": 5212709,
-      "required": true
+      "required": true,
       "sides": [
         "client"
       ]
@@ -926,7 +926,7 @@
     {
       "projectID": 1012168,
       "fileID": 5309537,
-      "required": true
+      "required": true,
       "sides": [
         "server"
       ]
@@ -934,7 +934,7 @@
     {
       "projectID": 1005815,
       "fileID": 5528613,
-      "required": true
+      "required": true,
       "sides": [
         "server"
       ]
