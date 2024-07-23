@@ -8,6 +8,10 @@
     <a href="https://legacy.curseforge.com/minecraft/modpacks/nomi-ceu-taoed"><img src="https://cf.way2muchnoise.eu/versions/For%20MC_nomi-ceu_all.svg?badge_style=for_the_badge" alt="MC Versions"></a>
 </h1>
 
+## Warning
+
+For the server pack NEEDS CleanroomMC, for now you will have to install it manually (not too hard no worries). For client side, it is not needed.
+
 ## Features:
 - More deco mods
 - A discord integration built-in
