@@ -922,22 +922,6 @@
       "projectID": 233105,
       "fileID": 2745846,
       "required": true
-    },
-    {
-      "projectID": 1012168,
-      "fileID": 5309537,
-      "required": true,
-      "sides": [
-        "server"
-      ]
-    },
-    {
-      "projectID": 1005815,
-      "fileID": 5528613,
-      "required": true,
-      "sides": [
-        "server"
-      ]
     }
 
 
