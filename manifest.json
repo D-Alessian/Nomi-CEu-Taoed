@@ -600,6 +600,9 @@
       "projectID": 419286,
       "fileID": 5079135,
       "required": true
+      "sides": [
+        "client"
+      ]
     },
     {
       "projectID": 431982,
@@ -711,6 +714,9 @@
       "projectID": 870276,
       "fileID": 5212709,
       "required": true
+      "sides": [
+        "client"
+      ]
     },
     {
       "projectID": 870486,
@@ -916,6 +922,22 @@
       "projectID": 233105,
       "fileID": 2745846,
       "required": true
+    },
+    {
+      "projectID": 1012168,
+      "fileID": 5309537,
+      "required": true
+      "sides": [
+        "server"
+      ]
+    },
+    {
+      "projectID": 1005815,
+      "fileID": 5528613,
+      "required": true
+      "sides": [
+        "server"
+      ]
     }
 
 
