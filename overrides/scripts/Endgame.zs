@@ -78,12 +78,6 @@ blast_furnace.recipeBuilder()
 
 recipes.addShapeless(<avaritia:resource:2> * 9, [<metaitem:nuggetNeutronium>]);
 
-
-extractor.recipeBuilder()
-    .inputs(<nomilabs:impossiblerealmdata>)
-    .outputs([<nomilabs:quantumflux>])
-    .duration(100).EUt(3000).buildAndRegister();
-
 recipes.remove(<extrautils2:rainbowgenerator>);
 makeShaped("of_rainbow_generator", <extrautils2:rainbowgenerator>,
     ["OTO",
@@ -180,8 +174,6 @@ recipes.addShapeless(<avaritia:resource:3>, [<metaitem:nuggetNeutronium>]);
 
 // Assembly Line
 
-// ZPM Field Generator * 1
-<recipemap:assembly_line>.findRecipe(24000, [<metaitem:frameNaquadahAlloy>, <metaitem:plateNaquadahAlloy> * 6, <metaitem:quantumstar>, <metaitem:emitter.zpm> * 2, <metaitem:circuit.quantum_mainframe> * 2, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:wireFineUraniumRhodiumDinaquadide> * 64, <metaitem:cableGtSingleVanadiumGallium> * 4], [<liquid:soldering_alloy> * 1152]).remove();
 // Moved to Groovy
 
 // Rhodium Plated Palladium -> Rhodium Plated Lumium Palladium (Moved to Groovy)

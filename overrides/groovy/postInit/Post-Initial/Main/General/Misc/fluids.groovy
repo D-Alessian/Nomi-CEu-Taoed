@@ -1,11 +1,15 @@
 import com.nomiceu.nomilabs.fluid.registry.LabsFluids
 import gregtech.api.fluids.FluidState
-import gregtech.api.util.FluidTooltipUtil
 import mezz.jei.api.ingredients.VanillaTypes
 import net.minecraft.item.ItemStack
 import net.minecraftforge.fluids.Fluid
 import net.minecraftforge.fluids.FluidStack
 import net.minecraftforge.fluids.FluidUtil
+
+import java.util.function.Supplier
+
+import static gregtech.api.util.FluidTooltipUtil.*
+import static com.nomiceu.nomilabs.groovy.GroovyHelpers.TranslationHelpers.*
 
 /*
  * This File fixes Fluids being Items in JEI, as well as adding GT Tooltips to all Fluids.
@@ -69,7 +73,15 @@ addFluidTooltip(fluid('ender_distillation'))
 addFluidTooltip(fluid('vapor_of_levity'), FluidState.GAS)
 addFluidTooltip(fluid('hootch'))
 addFluidTooltip(fluid('fire_water'))
-addFluidTooltip(fluid('xpjuice'))
+
+// XP (Extra Tooltip)
+Supplier<List<String>> gtTooltip = createFluidTooltip(null, fluid('xpjuice').fluid, FluidState.LIQUID)
+addFluidTooltip(fluid('xpjuice'), () -> {
+	def result = [translate("nomiceu.tooltip.eio.liquid_xp")]
+	result.addAll(gtTooltip.get())
+	return result
+})
+
 addFluidTooltip(fluid('liquid_sunshine'))
 addFluidTooltip(fluid('cloud_seed'))
 addFluidTooltip(fluid('cloud_seed_concentrated'))
@@ -82,6 +94,25 @@ fixItemFluidTooltip(item('actuallyadditions:block_refined_canola_oil'), fluid('r
 fixItemFluidTooltip(item('actuallyadditions:block_crystal_oil'), fluid('crystaloil'))
 fixItemFluidTooltip(item('actuallyadditions:block_empowered_oil'), fluid('empoweredoil'))
 
+/* NuclearCraft */
+
+// Fixes (With Tooltip)
+fixItemFluidTooltip(item('nuclearcraft:fluid_chocolate_liquor'), fluid('chocolate_liquor'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_cocoa_butter'), fluid('cocoa_butter'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_unsweetened_chocolate'), fluid('unsweetened_chocolate'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_dark_chocolate'), fluid('dark_chocolate'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_milk_chocolate'), fluid('milk_chocolate'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_sugar'), fluid('sugar'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_gelatin'), fluid('gelatin'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_hydrated_gelatin'), fluid('hydrated_gelatin'))
+fixItemFluidTooltip(item('nuclearcraft:fluid_marshmallow'), fluid('marshmallow'))
+
+// Tooltip Additions
+addFluidTooltip(fluid('quartz'))
+addFluidTooltip(fluid('lapis'))
+addFluidTooltip(fluid('diamond'))
+addFluidTooltip(fluid('emerald'))
+
 /* Util Functions */
 
 /**
@@ -92,17 +123,26 @@ static void fixItemFluid(ItemStack itemForm, FluidStack fluidForm) {
 	mods.jei.ingredient.add(VanillaTypes.FLUID, fluidForm * 1000)
 }
 
+
 /**
  * Adds GT Tooltips to a fluid. Once added, cannot be removed via reloading.
  * (To be replaced by a Labs one in a future version of Labs)
  */
 static void addFluidTooltip(FluidStack fluidForm, FluidState type = FluidState.LIQUID) {
-	var existing = FluidTooltipUtil.getFluidTooltip(fluidForm.fluid)
+	addFluidTooltip(fluidForm, createFluidTooltip(null, fluidForm.fluid, type))
+}
+
+/**
+ * Adds a Tooltips to a fluid. Once added, cannot be removed via reloading.
+ * (To be replaced by a Labs one in a future version of Labs)
+ */
+static void addFluidTooltip(FluidStack fluidForm, Supplier<List<String>> tooltip) {
+	var existing = getFluidTooltip(fluidForm.fluid)
 
 	// Only Register if Not Already Registered (aka previous runs of this script)
 	// However, this is not reloadable. To be fixed in a future version of Labs.
 	if (existing != null && existing.isEmpty())
-		FluidTooltipUtil.registerTooltip(fluidForm.fluid, FluidTooltipUtil.createFluidTooltip(null, fluidForm.fluid, type))
+		registerTooltip(fluidForm.fluid, tooltip)
 }
 
 /**

@@ -1,13 +1,11 @@
 import com.cleanroommc.groovyscript.api.IIngredient
 import gregtech.api.items.metaitem.MetaItem
-import gregtech.api.metatileentity.MetaTileEntity
 import gregtech.api.unification.OreDictUnifier
 import gregtech.api.unification.ore.OrePrefix
 import gregtech.api.unification.stack.UnificationEntry
 import gregtech.common.metatileentities.MetaTileEntities
 import net.minecraft.item.ItemStack
 
-import static com.nomiceu.nomilabs.groovy.GroovyHelpers.SafeMethodHelpers.callInstanceMethodOfClass
 import static gregtech.loaders.recipe.CraftingComponent.*;
 import static gregtech.api.GTValues.*
 
@@ -27,13 +25,8 @@ void replaceRecipe(int minTier, int maxTier, IIngredient oreDict) {
 		def hull = getIngredientFromGTComponent(HULL, tier)
 		def plate = getIngredientFromGTComponent(PLATE, tier)
 		def cable = getIngredientFromGTComponent(CABLE_QUAD, tier)
+		def diode = MetaTileEntities.DIODES[tier].getStackForm()
 
-		// We must use Safe Method Helpers
-		// MetaTileEntityMultiblockPart has a method with TextureAtlasSprite not labelled as @SideOnly(Side.CLIENT)
-		// Direct call to MetaTileEntity
-		def diode = callInstanceMethodOfClass(MetaTileEntity.class, MetaTileEntities.DIODES[tier], "getStackForm", null)
-
-		crafting.removeByOutput(diode)
 		crafting.shapedBuilder()
 			.output(diode)
 			.matrix("CDC", "DHD", "PDP")
@@ -41,7 +34,7 @@ void replaceRecipe(int minTier, int maxTier, IIngredient oreDict) {
 			.key('D', oreDict)
 			.key('P', plate)
 			.key('C', cable)
-			.register()
+			.replace().register()
 	}
 }
 
